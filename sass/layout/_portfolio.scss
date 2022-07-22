@@ -37,6 +37,9 @@
   position: relative;
   overflow: hidden;
 }
+.card-overlay {
+  @extend %link;
+}
 
 .card-text {
   @include text(false, 18px, 1.56, 0.03em, false, false);
@@ -55,7 +58,7 @@
   transform: translateY(101%);
   transition: transform var(--transition);
 
-  .portfolio-card:hover & {
+  .card-overlay:hover & {
     transform: translateY(0);
   }
 }

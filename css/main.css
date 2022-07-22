@@ -15,7 +15,7 @@
   margin: 0;
 }
 
-.logo, .footer-list__link--light, .footer-list__link, .clients-list__link, .socials__link, .header-link, .nav-link {
+.logo, .footer-list__link--light, .footer-list__link, .card-overlay, .clients-list__link, .socials__link, .header-link, .nav-link {
   text-decoration: none;
   color: inherit;
 }
@@ -480,7 +480,7 @@ p {
   transition: transform var(--transition);
   transition: transform var(--transition), -webkit-transform var(--transition);
 }
-.portfolio-card:hover .card-text {
+.card-overlay:hover .card-text {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
