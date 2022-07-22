@@ -1,11 +1,13 @@
+@import './base/common';
 @import './base/container';
+
 @import './base/reset';
 @import './utils/placeholder';
 @import './utils/variables';
 @import './components/button';
 @import './layout/header';
 @import './layout/hero';
-@import './layout/mainsection';
+@import './layout/section';
 @import './layout/reason';
 @import './layout/work';
 @import './layout/team';
