@@ -1,3 +1,8 @@
+.reason-list {
+  @extend %list;
+  @extend %card-set;
+}
+
 .reason-list__overlay {
   height: 120px;
   width: 270px;
@@ -11,8 +16,8 @@
 }
 
 .reason-list__title {
-  font-size: 14px;
-  text-transform: uppercase;
+  @include text(false, 14px, false, false, false, uppercase);
+
   color: var(--secondary-title-color);
   margin-bottom: 10px;
 }

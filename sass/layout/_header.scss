@@ -6,32 +6,20 @@
   display: flex;
   align-items: center;
 }
+.nav-list {
+  @extend %list;
 
-.logo {
-  font-family: 'Raleway';
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-}
-
-.logo__text {
-  color: var(--accent-color);
-}
-
-.logo__text--dark {
-  color: var(--secondary-text-color);
+  display: flex;
+  margin-left: 93px;
 }
 
 .nav-item:not(:last-child) {
   margin-right: 50px;
 }
 
-.nav-list {
-  display: flex;
-  margin-left: 93px;
-}
-
 .nav-link {
+  @extend %link;
+
   display: block;
   position: relative;
   padding-top: 32px;
@@ -40,29 +28,28 @@
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--secondary-title-color);
-}
-
-.nav-link:hover,
-.nav-link:focus {
-  color: var(--accent-color);
-}
-
-.nav-link.current {
-  color: var(--accent-color);
-}
-
-.nav-link.current::after {
-  content: '';
-  display: block;
-  position: absolute;
-  bottom: -1px;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--accent-color);
+  &:hover,
+  :focus {
+    color: var(--accent-color);
+  }
+  &.current {
+    color: var(--accent-color);
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -1px;
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background-color: var(--accent-color);
+    }
+  }
 }
 
 .header-list {
+  @extend %list;
+
   display: flex;
   margin-left: auto;
 }
@@ -72,6 +59,8 @@
 }
 
 .header-link {
+  @extend %link;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,20 +68,18 @@
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--main-text-color);
-}
-
-.header-link:hover,
-.header-link:focus {
-  color: var(--accent-color);
+  &:hover,
+  :focus {
+    color: var(--accent-color);
+  }
 }
 
 .contact-icon {
   margin-right: 10px;
   transition: var(--transition);
   fill: var(--main-text-color);
-}
-
-.header-link:hover .contact-icon,
-.header-link:focus .contact-icon {
-  fill: var(--accent-color);
+  .header-link:hover &,
+  .header-link:focus & {
+    fill: var(--accent-color);
+  }
 }

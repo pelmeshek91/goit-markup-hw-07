@@ -12,18 +12,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  .checkbox:checked + & {
+    background-color: var(--accent-color);
+    border: none;
+  }
+  .checkbox:focus + & {
+    border-color: var(--accent-color);
+  }
 }
 
 .checkbox {
   appearance: none;
   position: absolute;
-}
-
-.checkbox:checked + .icon-check {
-  background-color: var(--accent-color);
-  border: none;
-}
-
-.checkbox:focus + .icon-check {
-  border-color: var(--accent-color);
 }

@@ -1,10 +1,12 @@
+@import './utils/variables';
+@import './utils/placeholder';
+@import './utils/visually-hidden';
+@import './utils/mixin';
+
 @import './base/common';
 @import './base/container';
-
 @import './base/reset';
-@import './utils/placeholder';
-@import './utils/variables';
-@import './components/button';
+
 @import './layout/header';
 @import './layout/hero';
 @import './layout/section';
@@ -13,9 +15,12 @@
 @import './layout/team';
 @import './layout/social';
 @import './layout/clients';
-@import './pages/portfolio';
+@import './layout/portfolio';
 @import './layout/footer';
 @import './layout/footer-form';
+
+@import './components/logo';
+@import './components/button';
 @import './components/modal';
 @import './components/backdrop';
 @import './components/checkbox';

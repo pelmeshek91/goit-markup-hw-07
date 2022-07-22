@@ -1,7 +1,10 @@
 .section__work {
   padding-top: 0px;
 }
-
+.work-list {
+  @extend %list;
+  @extend %card-set;
+}
 .work-list__item {
   position: relative;
 }
@@ -20,9 +23,6 @@
 }
 
 .work-list__text {
-  text-align: center;
-  font-size: 14px;
-  line-height: calc(16 / 14);
-  text-transform: uppercase;
+  @include text(false, 14px, 1.14, false, center, uppercase);
   color: var(--main-title-color);
 }

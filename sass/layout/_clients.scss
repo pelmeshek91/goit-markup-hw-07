@@ -1,9 +1,15 @@
+.clients-list {
+  @extend %list;
+  @extend %card-set;
+}
 .clients-list__item {
   width: 170px;
   height: 92px;
 }
 
 .clients-list__link {
+  @extend %link;
+
   width: 100%;
   height: 100%;
   display: flex;
@@ -12,19 +18,17 @@
   border: 1px solid #afb1b8;
   border-radius: 4px;
   transition: border-color var(--transition);
-}
-
-.clients-list__link:hover,
-.clients-list__link:focus {
-  border-color: var(--accent-color);
+  &:hover,
+  :focus {
+    border-color: var(--accent-color);
+  }
 }
 
 .clients-list__icon {
   fill: #afb1b8;
   transition: fill var(--transition);
-}
-
-.clients-list__link:hover .clients-list__icon,
-.clients-list__link:focus .clients-list__icon {
-  fill: var(--accent-color);
+  .clients-list__link:hover &,
+  .clients-list__link:focus & {
+    fill: var(--accent-color);
+  }
 }
